@@ -5,9 +5,12 @@
 #include "DateTime.h"
 #include "EventLogParser.h"
 #include "EventLog.h"
+#include "HTMLBuilder.h"
+#include "XMLBuilder.h"
 
 #include <iostream>
 #include <fstream>
+#include <memory>
 
 using std::cout;
 
@@ -27,6 +30,11 @@ int main() {
 
   } // file closed
 
-  // EventLogParser elp{};
-  // elp.construct("log.txt");
+  EventLogParser elp{};
+  std::unique_ptr<Builder> build = std::make_unique<HtmlBuilder>();
+  elp.change_builder(std::move(build));
+  elp.construct("log.txt");
+  build = std::make_unique<XMLBuilder>();
+  elp.change_builder(std::move(build));
+  elp.construct("log.txt");
 }
