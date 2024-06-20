@@ -1,0 +1,70 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "CMakeCCompilerId.c"
+    ],
+    "directory": "/home/easwad01/otherstuff/cmake-host/state/build/debug/CMakeFiles/3.22.1/CompilerIdC",
+    "file": "/home/easwad01/otherstuff/cmake-host/state/build/debug/CMakeFiles/3.22.1/CompilerIdC/CMakeCCompilerId.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "CMakeCXXCompilerId.cpp"
+    ],
+    "directory": "/home/easwad01/otherstuff/cmake-host/state/build/debug/CMakeFiles/3.22.1/CompilerIdCXX",
+    "file": "/home/easwad01/otherstuff/cmake-host/state/build/debug/CMakeFiles/3.22.1/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-v",
+      "-c",
+      "-o",
+      "CMakeFiles/cmTC_3a706.dir/CMakeCCompilerABI.c.o",
+      "/usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c"
+    ],
+    "directory": "/home/easwad01/otherstuff/cmake-host/state/build/debug/CMakeFiles/CMakeTmp",
+    "file": "/usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c",
+    "output": "/home/easwad01/otherstuff/cmake-host/state/build/debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_3a706.dir/CMakeCCompilerABI.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-v",
+      "-c",
+      "-o",
+      "CMakeFiles/cmTC_bd7f9.dir/CMakeCXXCompilerABI.cpp.o",
+      "/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
+    ],
+    "directory": "/home/easwad01/otherstuff/cmake-host/state/build/debug/CMakeFiles/CMakeTmp",
+    "file": "/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp",
+    "output": "/home/easwad01/otherstuff/cmake-host/state/build/debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_bd7f9.dir/CMakeCXXCompilerABI.cpp.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-DDEBUG",
+      "-D_DEBUG",
+      "-I/home/easwad01/otherstuff/cmake-host/state/src",
+      "-I/home/easwad01/otherstuff/cmake-host/state/include",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Wconversion",
+      "-Wsign-conversion",
+      "-g3",
+      "-Og",
+      "-std=c++17",
+      "-c",
+      "-o",
+      "CMakeFiles/Application.dir/src/main.cpp.o",
+      "/home/easwad01/otherstuff/cmake-host/state/src/main.cpp"
+    ],
+    "directory": "/home/easwad01/otherstuff/cmake-host/state/build/debug",
+    "file": "/home/easwad01/otherstuff/cmake-host/state/src/main.cpp",
+    "output": "/home/easwad01/otherstuff/cmake-host/state/build/debug/CMakeFiles/Application.dir/src/main.cpp.o"
+  }
+]
