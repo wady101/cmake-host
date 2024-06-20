@@ -10,7 +10,7 @@ using std::cout;
 constexpr int count = 10;
 
 int main() {
-  MessageQueue queue{};
+  MessageQueue<Message> queue{};
   auto fill_mq = [&queue]() {
     int i{};
     do {
