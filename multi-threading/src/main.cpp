@@ -4,6 +4,8 @@
 
 #include "MessageQueue.h"
 #include <iostream>
+#include "Thread.hpp"
+#include <thread>
 
 using std::cout;
 
@@ -11,37 +13,21 @@ constexpr int count = 10;
 
 int main() {
   MessageQueue<Message> queue{};
-  auto fill_mq = [&queue]() {
-    int i{};
+  UI ui{queue};
+  Display display{queue};
+
+  auto run_policy = [](Thread &runnable) {
+    bool finished{};
     do {
-      if (auto successful = queue.send(i++, "Data"); not successful)
-        break;
-    } while (true);
+      finished = runnable.run();
+    } while (!finished);
   };
 
-  auto read_to_empty = [&queue]() {
-    do {
-      try {
-        auto [value, label] = queue.receive();
-        std::cout << label << ": " << value << '\n';
-      } catch (std::exception &ex) {
-        break;
-      }
-    } while (true);
-  };
+  std::thread t1{run_policy, std::ref(ui)}; // we need std::ref using run policy method. 
+                                            // Other way is to run a forever loop in *.run() func implementatation
+                                            // and kill thread eof main
+  std::thread t2{run_policy, std::ref(display)};
 
-  fill_mq();
-
-  try {
-    auto [value, label] = queue.peek();
-    std::cout << label << ": " << value << '\n';
-  } catch (std::exception &ex) {
-    std::cerr << ex.what() << '\n';
-  }
-
-  read_to_empty();
-
-  fill_mq();
-  queue.purge();
-  read_to_empty();
+  t1.join();
+  t2.join();
 }
